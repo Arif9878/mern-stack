@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "./*"
+  ],
+  "npmClient": "npm",
+  "version": "0.0.1"
+}
+

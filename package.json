@@ -1,0 +1,28 @@
+{
+  "name": "mern-stack",
+  "version": "0.0.1",
+  "description": "MERN (MongoDB, ExpressJS, ReactJS, NodeJS)",
+  "dependencies": {
+    "lerna": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "lerna exec --no-bail npm dev",
+    "build": "lerna exec NODE_ENV=production npm run-script build",
+    "start": "lerna exec NODE_ENV=development npm start watch --parallel --stream"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arif9878/mern-stack.git"
+  },
+  "keywords": [
+    "Mern",
+    "stack"
+  ],
+  "author": "arifboyz16@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arif9878/mern-stack/issues"
+  },
+  "homepage": "https://github.com/Arif9878/mern-stack#readme"
+}
