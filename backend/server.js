@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const productRoutes = require('./routes/productRoutes')
+const cors = require('cors')
 const env = process.env.NODE_ENV
 try {
     switch(env) {
@@ -26,6 +27,8 @@ connectDB();
 const app = express();
 
 app.use(express.json());
+
+app.use(cors())
 
 app.get("/", (req, res) => {
   res.json({ message: "API running..." });
