@@ -1,6 +1,24 @@
-require("dotenv").config();
-const express = require("express");
-const productRoutes = require("./routes/productRoutes");
+const express = require('express')
+const path = require('path')
+const productRoutes = require('./routes/productRoutes')
+const env = process.env.NODE_ENV
+try {
+    switch(env) {
+        case 'undefined':
+            require('dotenv').config()
+            break
+        case 'development':
+            require('dotenv').config({
+                path: path.resolve(process.cwd(), '../.env'),
+            })
+            break
+        default:
+            Error('Unrecognized Environment')
+    }
+} catch (err) {
+    Error('Error trying to run file')
+}
+
 const connectDB = require("./config/db");
 
 connectDB();
